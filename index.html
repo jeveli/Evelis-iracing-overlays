@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iRacing Overlay</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="overlay-container">
+
+    <!-- NY: SPEED + RPM I SAMMA OVERLAY (stylish) -->
+    <div id="widget-speedrpm" class="widget" data-base-w="420" data-base-h="92">
+      <div class="widget-inner speedrpm">
+        <div class="sr-top">
+          <div class="sr-lights" id="sr-lights"></div>
+          <div class="sr-pos" id="sr-pos">P--</div>
+        </div>
+
+        <div class="sr-main">
+          <div class="sr-gear-wrap">
+            <div class="sr-gear-ring">
+              <div class="sr-gear" id="sr-gear">N</div>
+            </div>
+          </div>
+
+          <div class="sr-mid">
+            <div class="sr-labels">
+              <span class="sr-label">KPH</span>
+              <span class="sr-label">RPM</span>
+            </div>
+            <div class="sr-values">
+              <span class="sr-speed" id="sr-speed">0</span>
+              <span class="sr-rpm" id="sr-rpm">0</span>
+            </div>
+          </div>
+
+          <div class="sr-right">
+            <div class="sr-mini">
+              <div class="sr-mini-label">LAP</div>
+              <div class="sr-mini-val"><span id="lap-current">0</span> / <span id="lap-total">-</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sr-bottom">
+          <div class="sr-pill" id="sr-pill-a">A 27°C</div>
+          <div class="sr-pill" id="sr-pill-t">T 22°C</div>
+          <div class="sr-pill" id="sr-pill-time">⏱ 0:00.000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Standings -->
+    <div id="widget-standings" class="widget" data-base-w="320" data-base-h="360">
+      <div class="widget-inner">
+        <div class="f1-header">
+          <span class="pos-col">POS</span>
+          <span class="driver-col">DRIVER</span>
+          <span class="gap-col">GAP</span>
+        </div>
+        <div id="standings-rows"></div>
+      </div>
+    </div>
+    <!-- Relative (Ahead/Behind) -->
+    <div id="widget-relative" class="widget" data-base-w="320" data-base-h="150">
+      <div class="widget-inner">
+        <div class="f1-header">
+          <span class="pos-col">REL</span>
+          <span class="driver-col">DRIVER</span>
+          <span class="gap-col">GAP</span>
+        </div>
+
+        <div class="f1-row">
+          <span class="pos-col">A</span>
+          <span class="driver-col">
+            <span id="rel-ahead-num" class="driver-num"></span>
+            <span id="rel-ahead-name">--</span>
+          </span>
+          <span id="rel-ahead-gap" class="gap-col">--</span>
+        </div>
+
+        <div class="f1-row">
+          <span class="pos-col">B</span>
+          <span class="driver-col">
+            <span id="rel-behind-num" class="driver-num"></span>
+            <span id="rel-behind-name">--</span>
+          </span>
+          <span id="rel-behind-gap" class="gap-col">--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fuel -->
+    <div id="widget-fuel" class="widget" data-base-w="180" data-base-h="120">
+      <div class="widget-inner fuel-gauge">
+        <div class="label">FUEL</div>
+        <div id="fuel-val">0.0 L</div>
+        <div class="progress-bar-bg">
+          <div id="fuel-bar" class="progress-bar-fill" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inputs -->
+    <div id="widget-inputs" class="widget" data-base-w="200" data-base-h="120">
+      <div class="widget-inner inputs-gauge">
+        <div class="input-group">
+          <span>T</span>
+          <div class="progress-bar-bg">
+            <div id="throttle-bar" class="progress-bar-fill throttle"></div>
+          </div>
+        </div>
+        <div class="input-group">
+          <span>B</span>
+          <div class="progress-bar-bg">
+            <div id="brake-bar" class="progress-bar-fill brake"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Best/Last -->
+    <div id="widget-bestlap" class="widget" data-base-w="200" data-base-h="95">
+      <div class="widget-inner simple-data">
+        <div class="label">BEST LAP</div>
+        <div id="best-lap-val" class="time-val">--:--.---</div>
+      </div>
+    </div>
+
+    <div id="widget-lastlap" class="widget" data-base-w="200" data-base-h="95">
+      <div class="widget-inner simple-data">
+        <div class="label">LAST LAP</div>
+        <div id="last-lap-val" class="time-val">--:--.---</div>
+      </div>
+    </div>
+
+    <!-- Temps -->
+    <div id="widget-temps" class="widget" data-base-w="200" data-base-h="95">
+      <div class="widget-inner temps-gauge">
+        <div>OIL: <span id="temp-oil">0</span>°C</div>
+        <div>H2O: <span id="temp-water">0</span>°C</div>
+      </div>
+    </div>
+
+    <!-- Incidents -->
+    <div id="widget-incidents" class="widget" data-base-w="200" data-base-h="95">
+      <div class="widget-inner simple-data incidents">
+        <div class="label">INCIDENTS</div>
+        <div id="incidents-val">0x</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

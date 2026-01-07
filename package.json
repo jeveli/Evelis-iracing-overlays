@@ -1,0 +1,40 @@
+{
+  "name": "evelis-iracing-overlays",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:py": "py -m PyInstaller --noconsole --onefile --name iracing_udp_bridge --distpath py-dist --workpath py-build iracing_udp_bridge.py",
+    "dist": "npm run build:py && electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.4.0"
+  },
+  "build": {
+    "appId": "com.eveli.iracingoverlays",
+    "productName": "Eveli´s Iracing Overlays",
+    "asar": true,
+    "files": [
+      "**/*",
+      "!py-dist/**",
+      "!py-build/**"
+    ],
+    "extraResources": [
+      {
+        "from": "py-dist/iracing_udp_bridge.exe",
+        "to": "backend/iracing_udp_bridge.exe"
+      }
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico"
+    }
+  }
+}

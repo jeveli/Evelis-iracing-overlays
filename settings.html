@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Eveli's iRacing Overlay Editor</title>
+  <style>
+    body { font-family: sans-serif; background:#181a1b; color:#eee; padding:18px; }
+    h2 { margin:0 0 12px 0; }
+    .hint { color:#bdbdbd; font-size:13px; margin-bottom:12px; }
+    .card { background:#222; border:1px solid #333; border-radius:12px; padding:14px; margin-bottom:14px; }
+    .row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .control-group { background:#262626; border:1px solid #333; border-radius:12px; padding:12px; margin-bottom:12px; }
+    .control-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+    input[type="checkbox"] { transform: scale(1.25); }
+    .slider { display:flex; align-items:center; gap:10px; }
+    input[type="range"] { flex:1; }
+    .val { width:42px; text-align:right; font-family: monospace; }
+    .btn { background:#2b2b2b; border:1px solid #3a3a3a; color:#eee; padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:700; }
+    .btn:hover { background:#333; }
+    .btn:disabled { opacity:.45; cursor:not-allowed; }
+
+  </style>
+</head>
+<body>
+  <h2>Overlay Editor</h2>
+  <div class="hint">Hotkeys: Ctrl+Shift+O (Open overlay editor), Ctrl+Shift+Q (Close all overlays)</div>
+<div class="card">
+  <div class="row">
+    <div>
+      <div style="font-weight:700;">Overlays</div>
+      <div class="hint" style="margin:6px 0 0 0;">Hides/shows all overlays without changing your widget settings.</div>
+    </div>
+    <button id="masterHideBtn" class="btn">Hide overlays</button>
+  </div>
+</div>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <div style="font-weight:700;">Edit mode</div>
+        <div class="hint" style="margin:6px 0 0 0;">On = Move/resize overlays. Off = Click-through in the game.</div>
+      </div>
+      <input id="editModeToggle" type="checkbox">
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:700; margin-bottom:10px;">Widgets</div>
+    <div id="controls-list"></div>
+  </div>
+
+  <script src="settings-renderer.js"></script>
+</body>
+</html>
