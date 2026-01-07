@@ -5,39 +5,44 @@ It runs as a desktop app and reads live session data through a Python bridge, th
 
 ## Features
 
-- **Live Standings / Results**
-  - Position, car number, driver name
-  - **Practice / Qual / Warmup:** shows **lap time + gap to P1** on the same row
-  - **Race sessions:** shows gaps/intervals (when available)
-  - Highlights your own car
+### Live Standings / Results
+- Position, car number, driver name
+- **Practice / Qual / Warmup:** shows **lap time + gap to P1** on the same row
+- **Race sessions:** shows gaps/intervals (when available)
+- Highlights your own car
 
-- **Clean Overlay Widgets**
-  - Designed to sit on top of iRacing while you drive
-  - Works with iRacing in **Windowed** or **Borderless** mode
+### Clean Overlay Widgets
+- Designed to sit on top of iRacing while you drive
+- Works with iRacing in **Windowed** or **Borderless** mode
 
-- **Per-widget Scaling**
-  - Adjust widget size with a slider
-  - Place widgets where you want on screen
+### Per-widget Scaling & Placement
+- Adjust widget size with a slider
+- Place widgets where you want on screen
 
-- **Simple Launch**
-  - One app starts both the overlay UI and the backend bridge (no manual Python start needed in packaged builds)
+### Simple Launch
+- One app starts both the overlay UI and the backend bridge  
+  (no manual Python start needed in packaged builds)
 
 ## Project Status (Test Stage)
 
 This project is currently in an **early test stage**. It already works as-is and can be used right now, but the codebase is still evolving and improvements may be frequent.
 
-### Extend and Improve
-You are welcome to **fork this repository and continue development**. The goal is to keep the project open and easy to modify, so anyone can:
-- Add new overlay widgets (new panels, new data views)
-- Improve existing widgets (layout, formatting, filtering)
-- Add new settings (more scaling/position controls, themes, etc.)
-- Improve performance and stability
-- Improve packaging / installer experience
+## Open Development (Please Contribute)
 
-### How to Contribute
-- Open an **Issue** for bugs, suggestions, or feature requests
-- Create a **Pull Request** with improvements
-- Keep changes focused and clearly described (what was changed and why)
+I want this project to be **community-driven**. You are encouraged to fork the repo, add features, and submit pull requests.
+
+### Ideas for New Overlays / Features
+Examples of things I would love to add over time:
+- Relative / nearby cars overlay (ahead/behind with gaps)
+- Fuel usage / fuel remaining and pit strategy panel
+- Tires (compound, wear estimates, temps if available)
+- Incident / penalty / event messages panel
+- Lap delta / pace comparison widgets
+- Driver rating / safety rating display (where applicable)
+- Additional styling themes and layout presets
+- Better multi-monitor handling and more widget controls
+
+If you build something useful, please open a Pull Request so everyone can benefit.
 
 ## Requirements
 
@@ -54,16 +59,9 @@ You are welcome to **fork this repository and continue development**. The goal i
 6. Move and scale the overlay widgets as desired.
 
 ### Recommended iRacing Display Settings
-To ensure the overlays appear on top reliably:
+To ensure overlays appear on top reliably:
 - Use **Borderless** (recommended) or **Windowed**
 - If you use multiple monitors, place overlays on the same display as the iRacing window
-
-![3](https://github.com/user-attachments/assets/95b927dd-d672-4cc2-b41b-80d56096319f)
-![1](https://github.com/user-attachments/assets/78902e86-927e-4cef-99c0-d3606d3ed733)
-![2](https://github.com/user-attachments/assets/2d1cf799-078e-4e97-bce8-e9cdba838f58)
-
-
-
 
 ## How to Use
 
@@ -95,13 +93,14 @@ To ensure the overlays appear on top reliably:
 - Node.js (LTS recommended)
 - Python 3.x
 
-## License
-MIT
-
-
 ### Run in Development
 ```bash
 npm install
+pip install -r requirements.txt
 npm start
-npm run dist
+
+
+![3](https://github.com/user-attachments/assets/95b927dd-d672-4cc2-b41b-80d56096319f)
+![1](https://github.com/user-attachments/assets/78902e86-927e-4cef-99c0-d3606d3ed733)
+![2](https://github.com/user-attachments/assets/2d1cf799-078e-4e97-bce8-e9cdba838f58)
 
