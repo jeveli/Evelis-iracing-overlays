@@ -58,9 +58,11 @@ To ensure the overlays appear on top reliably:
 - Use **Borderless** (recommended) or **Windowed**
 - If you use multiple monitors, place overlays on the same display as the iRacing window
 
-- ![1](https://github.com/user-attachments/assets/2ae08093-d09b-491e-a4f6-46e3af22fa43)
-![1](https://github.com/user-attachments/assets/aeea4771-adb5-4a0f-9fe4-3b487c279b13)
-![2](https://github.com/user-attachments/assets/619057d9-2754-450b-860f-653dafb864ad)
+![3](https://github.com/user-attachments/assets/95b927dd-d672-4cc2-b41b-80d56096319f)
+![1](https://github.com/user-attachments/assets/78902e86-927e-4cef-99c0-d3606d3ed733)
+![2](https://github.com/user-attachments/assets/2d1cf799-078e-4e97-bce8-e9cdba838f58)
+
+
 
 
 ## How to Use
