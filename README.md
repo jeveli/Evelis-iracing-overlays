@@ -58,6 +58,11 @@ To ensure the overlays appear on top reliably:
 - Use **Borderless** (recommended) or **Windowed**
 - If you use multiple monitors, place overlays on the same display as the iRacing window
 
+- ![1](https://github.com/user-attachments/assets/2ae08093-d09b-491e-a4f6-46e3af22fa43)
+![1](https://github.com/user-attachments/assets/aeea4771-adb5-4a0f-9fe4-3b487c279b13)
+![2](https://github.com/user-attachments/assets/619057d9-2754-450b-860f-653dafb864ad)
+
+
 ## How to Use
 
 1. Start the overlay app.
@@ -94,6 +99,3 @@ npm install
 npm start
 npm run dist
 
-![1](https://github.com/user-attachments/assets/70e8eb12-8127-43a5-8c0e-8a34b81907f3)
-![2](https://github.com/user-attachments/assets/9b1884a7-a989-4ae6-ad83-0d7c97c95832)
-![3](https://github.com/user-attachments/assets/e612a8e5-2700-4714-901a-94a6245fc608)
