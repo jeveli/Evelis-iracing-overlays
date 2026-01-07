@@ -93,6 +93,10 @@ To ensure the overlays appear on top reliably:
 - Node.js (LTS recommended)
 - Python 3.x
 
+## License
+MIT
+
+
 ### Run in Development
 ```bash
 npm install
