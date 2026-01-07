@@ -90,5 +90,9 @@ To ensure the overlays appear on top reliably:
 
 ### Run in Development
 ```bash
-npm install
+npm install![3](https://github.com/user-attachments/assets/64a3ec13-4d80-4e22-bc22-5a04565b92b4)
+![2](https://github.com/user-attachments/assets/0549443f-92d6-41e7-afb5-7de834b2ac12)
+![1](https://github.com/user-attachments/assets/6e35051c-7732-416d-8cca-9eb19a3f446e)
+
 npm start
+
