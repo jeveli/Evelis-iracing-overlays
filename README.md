@@ -43,7 +43,9 @@ Examples of things I would love to add over time:
 - Better multi-monitor handling and more widget controls
 
 If you build something useful, please open a Pull Request so everyone can benefit.
-
+![3](https://github.com/user-attachments/assets/95b927dd-d672-4cc2-b41b-80d56096319f)
+![1](https://github.com/user-attachments/assets/78902e86-927e-4cef-99c0-d3606d3ed733)
+![2](https://github.com/user-attachments/assets/2d1cf799-078e-4e97-bce8-e9cdba838f58)
 ## Requirements
 
 - Windows 10/11
@@ -100,7 +102,4 @@ pip install -r requirements.txt
 npm start
 
 
-![3](https://github.com/user-attachments/assets/95b927dd-d672-4cc2-b41b-80d56096319f)
-![1](https://github.com/user-attachments/assets/78902e86-927e-4cef-99c0-d3606d3ed733)
-![2](https://github.com/user-attachments/assets/2d1cf799-078e-4e97-bce8-e9cdba838f58)
 
